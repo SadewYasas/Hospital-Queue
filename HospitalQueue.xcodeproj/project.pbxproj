@@ -3,23 +3,80 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 56;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		B001000000000000000001 /* HospitalQueueApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000001 /* HospitalQueueApp.swift */; };
+		B001000000000000000002 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000002 /* RootView.swift */; };
+		B001000000000000000003 /* MainTabContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000003 /* MainTabContainerView.swift */; };
+		B001000000000000000004 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000004 /* Theme.swift */; };
+		B001000000000000000005 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000005 /* PrimaryButton.swift */; };
+		B001000000000000000006 /* StyledTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000006 /* StyledTextField.swift */; };
+		B001000000000000000007 /* OTPFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000007 /* OTPFieldView.swift */; };
+		B001000000000000000008 /* StarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000008 /* StarRatingView.swift */; };
+		B001000000000000000009 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000009 /* AppState.swift */; };
+		B00100000000000000000A /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00100000000000000000A /* DummyData.swift */; };
+		B00100000000000000000B /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00100000000000000000B /* SignInView.swift */; };
+		B00100000000000000000C /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00100000000000000000C /* CreateAccountView.swift */; };
+		B00100000000000000000D /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00100000000000000000D /* ForgotPasswordView.swift */; };
+		B00100000000000000000E /* OTPVerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00100000000000000000E /* OTPVerificationView.swift */; };
+		B00100000000000000000F /* EnterNewPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00100000000000000000F /* EnterNewPasswordView.swift */; };
+		B001000000000000000010 /* PasswordResetSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000010 /* PasswordResetSuccessView.swift */; };
+		B001000000000000000011 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000011 /* WelcomeView.swift */; };
+		B001000000000000000012 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000012 /* HomeView.swift */; };
+		B001000000000000000013 /* TokenState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000013 /* TokenState.swift */; };
+		B001000000000000000014 /* TokenGeneratedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000014 /* TokenGeneratedView.swift */; };
+		B001000000000000000015 /* TokenQRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000015 /* TokenQRView.swift */; };
+		B001000000000000000016 /* QueueStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000016 /* QueueStatusView.swift */; };
+		B001000000000000000017 /* ItsYourTurnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000017 /* ItsYourTurnView.swift */; };
+		B001000000000000000018 /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000018 /* ReviewView.swift */; };
+		B001000000000000000019 /* EndSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000019 /* EndSessionView.swift */; };
+		B00100000000000000001A /* NavigatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00100000000000000001A /* NavigatorView.swift */; };
+		B00100000000000000001B /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00100000000000000001B /* ProfileView.swift */; };
+		B00100000000000000001C /* ProfileSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00100000000000000001C /* ProfileSectionView.swift */; };
+		B00100000000000000001D /* DoctorListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00100000000000000001D /* DoctorListView.swift */; };
+		B00100000000000000001E /* DoctorDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00100000000000000001E /* DoctorDetailView.swift */; };
+		B00100000000000000001F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F00100000000000000001F /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
-		907368872F4C909800FADDFD /* HospitalQueue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HospitalQueue.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E001000000000000000001 /* HospitalQueue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HospitalQueue.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F001000000000000000001 /* HospitalQueueApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalQueueApp.swift; sourceTree = "<group>"; };
+		F001000000000000000002 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		F001000000000000000003 /* MainTabContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabContainerView.swift; sourceTree = "<group>"; };
+		F001000000000000000004 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		F001000000000000000005 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		F001000000000000000006 /* StyledTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledTextField.swift; sourceTree = "<group>"; };
+		F001000000000000000007 /* OTPFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPFieldView.swift; sourceTree = "<group>"; };
+		F001000000000000000008 /* StarRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRatingView.swift; sourceTree = "<group>"; };
+		F001000000000000000009 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		F00100000000000000000A /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
+		F00100000000000000000B /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		F00100000000000000000C /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
+		F00100000000000000000D /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
+		F00100000000000000000E /* OTPVerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPVerificationView.swift; sourceTree = "<group>"; };
+		F00100000000000000000F /* EnterNewPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterNewPasswordView.swift; sourceTree = "<group>"; };
+		F001000000000000000010 /* PasswordResetSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetSuccessView.swift; sourceTree = "<group>"; };
+		F001000000000000000011 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		F001000000000000000012 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		F001000000000000000013 /* TokenState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenState.swift; sourceTree = "<group>"; };
+		F001000000000000000014 /* TokenGeneratedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenGeneratedView.swift; sourceTree = "<group>"; };
+		F001000000000000000015 /* TokenQRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenQRView.swift; sourceTree = "<group>"; };
+		F001000000000000000016 /* QueueStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueStatusView.swift; sourceTree = "<group>"; };
+		F001000000000000000017 /* ItsYourTurnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItsYourTurnView.swift; sourceTree = "<group>"; };
+		F001000000000000000018 /* ReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
+		F001000000000000000019 /* EndSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndSessionView.swift; sourceTree = "<group>"; };
+		F00100000000000000001A /* NavigatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorView.swift; sourceTree = "<group>"; };
+		F00100000000000000001B /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		F00100000000000000001C /* ProfileSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSectionView.swift; sourceTree = "<group>"; };
+		F00100000000000000001D /* DoctorListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorListView.swift; sourceTree = "<group>"; };
+		F00100000000000000001E /* DoctorDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorDetailView.swift; sourceTree = "<group>"; };
+		F00100000000000000001F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		907368892F4C909800FADDFD /* HospitalQueue */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = HospitalQueue;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
-
 /* Begin PBXFrameworksBuildPhase section */
-		907368842F4C909700FADDFD /* Frameworks */ = {
+		D001000000000000000001 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -29,156 +86,235 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9073687E2F4C909700FADDFD = {
+		G001000000000000000001 = {
 			isa = PBXGroup;
 			children = (
-				907368892F4C909800FADDFD /* HospitalQueue */,
-				907368882F4C909800FADDFD /* Products */,
+				G001000000000000000002 /* HospitalQueue */,
+				G001000000000000000003 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		907368882F4C909800FADDFD /* Products */ = {
+		G001000000000000000002 /* HospitalQueue */ = {
 			isa = PBXGroup;
 			children = (
-				907368872F4C909800FADDFD /* HospitalQueue.app */,
+				F001000000000000000001 /* HospitalQueueApp.swift */,
+				F001000000000000000002 /* RootView.swift */,
+				F001000000000000000003 /* MainTabContainerView.swift */,
+				G001000000000000000004 /* Shared */,
+				G001000000000000000005 /* Auth */,
+				G001000000000000000006 /* Home */,
+				G001000000000000000007 /* Token */,
+				G001000000000000000008 /* Navigator */,
+				G001000000000000000009 /* Profile */,
+				G00100000000000000000A /* DoctorAppointment */,
+				F00100000000000000001F /* Assets.xcassets */,
+			);
+			path = HospitalQueue;
+			sourceTree = "<group>";
+		};
+		G001000000000000000003 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E001000000000000000001 /* HospitalQueue.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		G001000000000000000004 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				F001000000000000000004 /* Theme.swift */,
+				F001000000000000000005 /* PrimaryButton.swift */,
+				F001000000000000000006 /* StyledTextField.swift */,
+				F001000000000000000007 /* OTPFieldView.swift */,
+				F001000000000000000008 /* StarRatingView.swift */,
+				F001000000000000000009 /* AppState.swift */,
+				F00100000000000000000A /* DummyData.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		G001000000000000000005 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				F00100000000000000000B /* SignInView.swift */,
+				F00100000000000000000C /* CreateAccountView.swift */,
+				F00100000000000000000D /* ForgotPasswordView.swift */,
+				F00100000000000000000E /* OTPVerificationView.swift */,
+				F00100000000000000000F /* EnterNewPasswordView.swift */,
+				F001000000000000000010 /* PasswordResetSuccessView.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		G001000000000000000006 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F001000000000000000011 /* WelcomeView.swift */,
+				F001000000000000000012 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		G001000000000000000007 /* Token */ = {
+			isa = PBXGroup;
+			children = (
+				F001000000000000000013 /* TokenState.swift */,
+				F001000000000000000014 /* TokenGeneratedView.swift */,
+				F001000000000000000015 /* TokenQRView.swift */,
+				F001000000000000000016 /* QueueStatusView.swift */,
+				F001000000000000000017 /* ItsYourTurnView.swift */,
+				F001000000000000000018 /* ReviewView.swift */,
+				F001000000000000000019 /* EndSessionView.swift */,
+			);
+			path = Token;
+			sourceTree = "<group>";
+		};
+		G001000000000000000008 /* Navigator */ = {
+			isa = PBXGroup;
+			children = (
+				F00100000000000000001A /* NavigatorView.swift */,
+			);
+			path = Navigator;
+			sourceTree = "<group>";
+		};
+		G001000000000000000009 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				F00100000000000000001B /* ProfileView.swift */,
+				F00100000000000000001C /* ProfileSectionView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		G00100000000000000000A /* DoctorAppointment */ = {
+			isa = PBXGroup;
+			children = (
+				F00100000000000000001D /* DoctorListView.swift */,
+				F00100000000000000001E /* DoctorDetailView.swift */,
+			);
+			path = DoctorAppointment;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		907368862F4C909700FADDFD /* HospitalQueue */ = {
+		T001000000000000000001 /* HospitalQueue */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 907368922F4C909A00FADDFD /* Build configuration list for PBXNativeTarget "HospitalQueue" */;
+			buildConfigurationList = C001000000000000000002 /* Build configuration list for PBXNativeTarget "HospitalQueue" */;
 			buildPhases = (
-				907368832F4C909700FADDFD /* Sources */,
-				907368842F4C909700FADDFD /* Frameworks */,
-				907368852F4C909700FADDFD /* Resources */,
+				D001000000000000000002 /* Sources */,
+				D001000000000000000001 /* Frameworks */,
+				D001000000000000000003 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				907368892F4C909800FADDFD /* HospitalQueue */,
-			);
 			name = HospitalQueue;
-			packageProductDependencies = (
-			);
 			productName = HospitalQueue;
-			productReference = 907368872F4C909800FADDFD /* HospitalQueue.app */;
+			productReference = E001000000000000000001 /* HospitalQueue.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		9073687F2F4C909700FADDFD /* Project object */ = {
+		P001000000000000000001 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 2620;
-				LastUpgradeCheck = 2620;
-				TargetAttributes = {
-					907368862F4C909700FADDFD = {
-						CreatedOnToolsVersion = 26.2;
-					};
-				};
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
 			};
-			buildConfigurationList = 907368822F4C909700FADDFD /* Build configuration list for PBXProject "HospitalQueue" */;
+			buildConfigurationList = C001000000000000000001 /* Build configuration list for PBXProject "HospitalQueue" */;
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 9073687E2F4C909700FADDFD;
-			minimizedProjectReferenceProxies = 1;
-			preferredProjectObjectVersion = 77;
-			productRefGroup = 907368882F4C909800FADDFD /* Products */;
+			mainGroup = G001000000000000000001;
+			productRefGroup = G001000000000000000003 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				907368862F4C909700FADDFD /* HospitalQueue */,
+				T001000000000000000001 /* HospitalQueue */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		907368852F4C909700FADDFD /* Resources */ = {
+		D001000000000000000003 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B00100000000000000001F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		907368832F4C909700FADDFD /* Sources */ = {
+		D001000000000000000002 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B001000000000000000001 /* HospitalQueueApp.swift in Sources */,
+				B001000000000000000002 /* RootView.swift in Sources */,
+				B001000000000000000003 /* MainTabContainerView.swift in Sources */,
+				B001000000000000000004 /* Theme.swift in Sources */,
+				B001000000000000000005 /* PrimaryButton.swift in Sources */,
+				B001000000000000000006 /* StyledTextField.swift in Sources */,
+				B001000000000000000007 /* OTPFieldView.swift in Sources */,
+				B001000000000000000008 /* StarRatingView.swift in Sources */,
+				B001000000000000000009 /* AppState.swift in Sources */,
+				B00100000000000000000A /* DummyData.swift in Sources */,
+				B00100000000000000000B /* SignInView.swift in Sources */,
+				B00100000000000000000C /* CreateAccountView.swift in Sources */,
+				B00100000000000000000D /* ForgotPasswordView.swift in Sources */,
+				B00100000000000000000E /* OTPVerificationView.swift in Sources */,
+				B00100000000000000000F /* EnterNewPasswordView.swift in Sources */,
+				B001000000000000000010 /* PasswordResetSuccessView.swift in Sources */,
+				B001000000000000000011 /* WelcomeView.swift in Sources */,
+				B001000000000000000012 /* HomeView.swift in Sources */,
+				B001000000000000000013 /* TokenState.swift in Sources */,
+				B001000000000000000014 /* TokenGeneratedView.swift in Sources */,
+				B001000000000000000015 /* TokenQRView.swift in Sources */,
+				B001000000000000000016 /* QueueStatusView.swift in Sources */,
+				B001000000000000000017 /* ItsYourTurnView.swift in Sources */,
+				B001000000000000000018 /* ReviewView.swift in Sources */,
+				B001000000000000000019 /* EndSessionView.swift in Sources */,
+				B00100000000000000001A /* NavigatorView.swift in Sources */,
+				B00100000000000000001B /* ProfileView.swift in Sources */,
+				B00100000000000000001C /* ProfileSectionView.swift in Sources */,
+				B00100000000000000001D /* DoctorListView.swift in Sources */,
+				B00100000000000000001E /* DoctorDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		907368902F4C909A00FADDFD /* Debug */ = {
+		C001000000000000000003 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -188,54 +324,19 @@
 			};
 			name = Debug;
 		};
-		907368912F4C909A00FADDFD /* Release */ = {
+		C001000000000000000004 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -244,15 +345,18 @@
 			};
 			name = Release;
 		};
-		907368932F4C909A00FADDFD /* Debug */ = {
+		C001000000000000000005 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HospitalQueue/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Hospital Queue";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -263,27 +367,28 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "-75.HospitalQueue";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hospitalqueue.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
-		907368942F4C909A00FADDFD /* Release */ = {
+		C001000000000000000006 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HospitalQueue/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Hospital Queue";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -294,40 +399,38 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "-75.HospitalQueue";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hospitalqueue.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		907368822F4C909700FADDFD /* Build configuration list for PBXProject "HospitalQueue" */ = {
+		C001000000000000000001 /* Build configuration list for PBXProject "HospitalQueue" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				907368902F4C909A00FADDFD /* Debug */,
-				907368912F4C909A00FADDFD /* Release */,
+				C001000000000000000003 /* Debug */,
+				C001000000000000000004 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		907368922F4C909A00FADDFD /* Build configuration list for PBXNativeTarget "HospitalQueue" */ = {
+		C001000000000000000002 /* Build configuration list for PBXNativeTarget "HospitalQueue" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				907368932F4C909A00FADDFD /* Debug */,
-				907368942F4C909A00FADDFD /* Release */,
+				C001000000000000000005 /* Debug */,
+				C001000000000000000006 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 9073687F2F4C909700FADDFD /* Project object */;
+	rootObject = P001000000000000000001 /* Project object */;
 }
