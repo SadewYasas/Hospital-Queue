@@ -45,10 +45,21 @@ struct HomeView: View {
             .padding(.top, 16)
             .padding(.bottom, 32)
         }
-        .background(Color(UIColor.systemGroupedBackground))
-        .navigationTitle("Home")
-        .navigationBarTitleDisplayMode(.large)
+        .scrollIndicators(.hidden)
+        .background(
+            LinearGradient(colors: [Color(UIColor.systemGroupedBackground), Color.white], startPoint: .top, endPoint: .bottom)
+        )
         .toolbar {
+            ToolbarItem(placement: .principal) {
+                HStack(spacing: 8) {
+                    Image(systemName: "heart.text.square.fill")
+                        .symbolRenderingMode(.hierarchical)
+                        .foregroundStyle(Theme.primaryGreen)
+                    Text("Home")
+                        .font(.system(size: 28, weight: .bold, design: .rounded))
+                        .foregroundStyle(Theme.primaryGreen)
+                }
+            }
             ToolbarItem(placement: .navigationBarTrailing) {
                 NavigationLink(destination: ProfileView()) {
                     Image(systemName: "person.circle.fill")
@@ -64,15 +75,20 @@ struct HomeView: View {
     
     private var bannerCard: some View {
         ZStack(alignment: .trailing) {
-            RoundedRectangle(cornerRadius: 16)
+            RoundedRectangle(cornerRadius: 20, style: .continuous)
                 .fill(
                     LinearGradient(
-                        colors: [Theme.tokenGradientStart, Theme.tokenGradientEnd],
+                        colors: [Theme.tokenGradientStart.opacity(0.95), Theme.tokenGradientEnd.opacity(0.95)],
                         startPoint: .topLeading,
                         endPoint: .bottomTrailing
                     )
                 )
-                .frame(height: 120)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 20, style: .continuous)
+                        .strokeBorder(Color.white.opacity(0.12), lineWidth: 1)
+                )
+                .shadow(color: Color.black.opacity(0.08), radius: 20, x: 0, y: 10)
+                .frame(height: 140)
             
             HStack {
                 VStack(alignment: .leading, spacing: 12) {
@@ -84,11 +100,14 @@ struct HomeView: View {
                         Text("Pre Book a slot")
                             .font(.subheadline)
                             .fontWeight(.semibold)
-                            .foregroundColor(Theme.tokenGradientStart)
+                            .foregroundColor(.white)
                             .padding(.horizontal, 16)
-                            .padding(.vertical, 8)
-                            .background(Color.white)
-                            .cornerRadius(8)
+                            .padding(.vertical, 10)
+                            .background(
+                                Capsule()
+                                    .fill(LinearGradient(colors: [Theme.tokenGradientStart, Theme.tokenGradientEnd], startPoint: .leading, endPoint: .trailing))
+                            )
+                            .shadow(color: Color.black.opacity(0.12), radius: 12, x: 0, y: 6)
                     }
                     .buttonStyle(.plain)
                 }
@@ -104,15 +123,16 @@ struct HomeView: View {
     }
     
     private var walkInSection: some View {
-        HStack {
+        HStack(spacing: 12) {
             Rectangle()
-                .fill(Theme.borderGray)
+                .fill(Theme.borderGray.opacity(0.5))
                 .frame(height: 1)
-            Text("Or walk in now")
-                .font(.subheadline)
+            Label("Or walk in now", systemImage: "figure.walk")
+                .labelStyle(.titleAndIcon)
+                .font(.subheadline.weight(.semibold))
                 .foregroundColor(Theme.textSecondary)
             Rectangle()
-                .fill(Theme.borderGray)
+                .fill(Theme.borderGray.opacity(0.5))
                 .frame(height: 1)
         }
         .padding(.vertical, 8)
@@ -127,22 +147,37 @@ struct HomeView: View {
                     tokenState.showTokenGenerated = true
                 }) {
                     HStack(spacing: 16) {
-                        Image(systemName: service.icon)
-                            .font(.title2)
-                            .foregroundColor(service.iconColor)
-                            .frame(width: 44, height: 44)
-                            .background(service.iconColor.opacity(0.15))
-                            .cornerRadius(10)
-                        Text(service.rawValue)
-                            .font(.headline)
-                            .foregroundColor(.primary)
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 12, style: .continuous)
+                                .fill(service.iconColor.opacity(0.12))
+                            Image(systemName: service.icon)
+                                .font(.title2.weight(.semibold))
+                                .foregroundColor(service.iconColor)
+                        }
+                        .frame(width: 48, height: 48)
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text(service.rawValue)
+                                .font(.headline.weight(.semibold))
+                                .foregroundColor(.primary)
+                            Text("Walk-in service")
+                                .font(.caption)
+                                .foregroundColor(Theme.textSecondary)
+                        }
                         Spacer()
                         Image(systemName: "chevron.right")
-                            .foregroundColor(Theme.textSecondary)
+                            .font(.footnote.weight(.semibold))
+                            .foregroundColor(Theme.textSecondary.opacity(0.8))
                     }
                     .padding(16)
-                    .background(Color.white)
-                    .cornerRadius(12)
+                    .background(
+                        RoundedRectangle(cornerRadius: 16, style: .continuous)
+                            .fill(Color.white)
+                            .shadow(color: Color.black.opacity(0.05), radius: 12, x: 0, y: 6)
+                    )
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 16, style: .continuous)
+                            .stroke(Color.black.opacity(0.04), lineWidth: 1)
+                    )
                 }
                 .buttonStyle(.plain)
             }

@@ -1,10 +1,4 @@
-//
-//  OTPVerificationView.swift
-//  HospitalQueue
-//
-
 import SwiftUI
-
 enum OTPFlow {
     case forgotPassword
     case signUp
@@ -30,49 +24,85 @@ struct OTPVerificationView: View {
     }
     
     var body: some View {
-        VStack(spacing: 28) {
-            Text("OTP Verification")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .padding(.top, 32)
+        ZStack {
+            // MARK: - Background gradient with soft blobs
+            LinearGradient(
+                colors: [Color("GradientTop"), Color("GradientBottom")],
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
+            .ignoresSafeArea()
             
-            Text("Please enter the verification code we've sent to \(maskedEmail)")
-                .font(.subheadline)
-                .foregroundColor(Theme.textSecondary)
-                .multilineTextAlignment(.center)
-                .padding(.horizontal)
-            
-            OTPFieldView(digits: $digits)
-                .padding(.horizontal, 24)
-            
-            PrimaryButton(title: "Verify") {
-                if flow == .forgotPassword {
-                    showNewPassword = true
-                } else {
-                    showSuccess = true
-                }
-            }
-            .padding(.horizontal, 24)
-            .padding(.top, 8)
-            
-            HStack(spacing: 4) {
-                Text("Didn't receive an OTP?")
-                    .foregroundColor(Theme.textSecondary)
-                Button("Resend OTP") {
-                    resendCooldown = true
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 60) {
-                        resendCooldown = false
+            ScrollView(showsIndicators: false) {
+                VStack(spacing: 32) {
+                    
+                    // MARK: - Header
+                    VStack(spacing: 8) {
+                        Text("OTP Verification")
+                            .font(.system(size: 36, weight: .bold, design: .rounded))
+                            .foregroundStyle(
+                                LinearGradient(
+                                    colors: [Color.green, Color.black],
+                                    startPoint: .leading,
+                                    endPoint: .trailing
+                                )
+                            )
+                        
+                        Text("Please enter the verification code we've sent to \(maskedEmail)")
+                            .font(.subheadline)
+                            .foregroundColor(Color("SecondaryText"))
+                            .multilineTextAlignment(.center)
+                            .opacity(0.85)
+                            .padding(.horizontal)
                     }
+                    .padding(.top, 120)
+                    
+                    // MARK: - OTP Field with glass effect
+                    OTPFieldView(digits: $digits)
+                        .padding()
+                        .background(.ultraThinMaterial)
+                        .cornerRadius(16)
+                        .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: 5)
+                        .padding(.horizontal, 24)
+                    
+                    // MARK: - Verify Button
+                    PrimaryButton(title: "Verify") {
+                        withAnimation(.spring()) {
+                            if flow == .forgotPassword {
+                                showNewPassword = true
+                            } else {
+                                showSuccess = true
+                            }
+                        }
+                    }
+                    .padding(.horizontal, 24)
+                    .shadow(color: Color.purple.opacity(0.3), radius: 12, x: 0, y: 6)
+                    
+                    // MARK: - Resend OTP
+                    HStack(spacing: 4) {
+                        Text("Didn't receive an OTP?")
+                            .foregroundColor(Color("SecondaryText"))
+                        
+                        Button(action: {
+                            resendCooldown = true
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 60) {
+                                resendCooldown = false
+                            }
+                        }) {
+                            Text("Resend OTP")
+                                .fontWeight(.medium)
+                        }
+                        .foregroundStyle(
+                            LinearGradient(colors: [Color.black, Color.gray], startPoint: .leading, endPoint: .trailing)
+                        )
+                        .disabled(resendCooldown)
+                    }
+                    .font(.subheadline)
+                    
+                    Spacer(minLength: 60)
                 }
-                .fontWeight(.medium)
-                .foregroundColor(.primary)
-                .disabled(resendCooldown)
             }
-            .font(.subheadline)
-            
-            Spacer()
         }
-        .background(Color(UIColor.systemGroupedBackground))
         .navigationBarTitleDisplayMode(.inline)
         .navigationDestination(isPresented: $showNewPassword) {
             EnterNewPasswordView()

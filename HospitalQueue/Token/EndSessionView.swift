@@ -11,8 +11,8 @@ struct EndSessionView: View {
     var body: some View {
         VStack(spacing: 32) {
             ProgressView()
-                .scaleEffect(1.5)
-                .padding(.top, 80)
+                .scaleEffect(3)
+                .padding(.top, 250)
             Text("Processing...")
                 .font(.subheadline)
                 .foregroundColor(Theme.textSecondary)

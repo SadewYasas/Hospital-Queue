@@ -24,23 +24,24 @@ struct NavigatorView: View {
         VStack(spacing: 0) {
             HStack {
                 Text("SG")
-                    .font(.subheadline)
+                    .font(.subheadline.weight(.semibold))
                     .foregroundColor(.primary)
                 Rectangle()
-                    .fill(Theme.borderGray)
+                    .fill(Color(UIColor.separator).opacity(0.5))
                     .frame(width: 1, height: 20)
                 Text(tokenState.currentToken)
-                    .font(.subheadline)
+                    .font(.subheadline.weight(.semibold))
                     .foregroundColor(.primary)
                 Spacer()
             }
             .padding(12)
-            .background(Color.white)
+            .background(Color(UIColor.secondarySystemBackground))
             .overlay(
-                RoundedRectangle(cornerRadius: 10)
-                    .stroke(Theme.borderGray, lineWidth: 1)
+                RoundedRectangle(cornerRadius: 14, style: .continuous)
+                    .stroke(Color(UIColor.separator).opacity(0.5), lineWidth: 1)
             )
-            .cornerRadius(10)
+            .cornerRadius(14)
+            .shadow(color: Color.black.opacity(0.06), radius: 10, x: 0, y: 6)
             .padding(.horizontal, 20)
             .padding(.top, 12)
             
@@ -52,17 +53,28 @@ struct NavigatorView: View {
                 }
             }
             .frame(height: 220)
-            .cornerRadius(12)
+            .overlay(
+                RoundedRectangle(cornerRadius: 16, style: .continuous)
+                    .stroke(Color(UIColor.separator).opacity(0.4), lineWidth: 1)
+            )
+            .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+            .shadow(color: Color.black.opacity(0.08), radius: 16, x: 0, y: 8)
             .padding(20)
             
             VStack(alignment: .leading, spacing: 12) {
                 ForEach(amenities, id: \.name) { amenity in
                     HStack(spacing: 12) {
-                        Image(systemName: "mappin.circle.fill")
-                            .foregroundColor(amenity.name == "Cafeteria" ? .orange : .primary)
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 10, style: .continuous)
+                                .fill((amenity.name == "Cafeteria") ? Color.orange.opacity(0.12) : Color.primary.opacity(0.08))
+                            Image(systemName: "mappin.circle.fill")
+                                .foregroundStyle((amenity.name == "Cafeteria") ? .orange : Theme.primaryGreen)
+                        }
+                        .frame(width: 36, height: 36)
                         VStack(alignment: .leading, spacing: 2) {
                             Text(amenity.name)
-                                .font(.headline)
+                                .foregroundStyle(.primary)
+                                .font(.subheadline.weight(.semibold))
                             Text(amenity.detail)
                                 .font(.caption)
                                 .foregroundColor(Theme.textSecondary)
@@ -70,8 +82,15 @@ struct NavigatorView: View {
                         Spacer()
                     }
                     .padding(12)
-                    .background(Color.white)
-                    .cornerRadius(10)
+                    .background(
+                        RoundedRectangle(cornerRadius: 14, style: .continuous)
+                            .fill(Color(UIColor.secondarySystemBackground))
+                    )
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 14, style: .continuous)
+                            .stroke(Color(UIColor.separator).opacity(0.4), lineWidth: 1)
+                    )
+                    .shadow(color: Color.black.opacity(0.05), radius: 10, x: 0, y: 6)
                 }
             }
             .padding(.horizontal, 20)
@@ -79,10 +98,21 @@ struct NavigatorView: View {
             
             Spacer()
         }
-        .background(Color(UIColor.systemGroupedBackground))
-        .navigationTitle("Navigator")
+        .background(
+            LinearGradient(colors: [Color(UIColor.systemGroupedBackground), Color.white], startPoint: .top, endPoint: .bottom)
+        )
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
+            ToolbarItem(placement: .principal) {
+                HStack(spacing: 8) {
+                    Image(systemName: "map.fill")
+                        .symbolRenderingMode(.hierarchical)
+                        .foregroundStyle(Theme.primaryGreen)
+                    Text("Navigator")
+                        .font(.headline.weight(.bold))
+                        .foregroundStyle(Theme.primaryGreen)
+                }
+            }
             ToolbarItem(placement: .navigationBarTrailing) {
                 NavigationLink(destination: ProfileView()) {
                     Image(systemName: "person.circle.fill")
