@@ -1,3 +1,4 @@
+
 //
 //  ItsYourTurnView.swift
 //  HospitalQueue
@@ -12,7 +13,7 @@ struct ItsYourTurnView: View {
     
     var body: some View {
         
-        VStack(spacing: 30) {
+        VStack(spacing: 32) {
             
             header
             
@@ -41,9 +42,9 @@ struct ItsYourTurnView: View {
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 NavigationLink(destination: ProfileView()) {
-                    Image(systemName: "person.circle.fill")
+                    Image(systemName: "person.crop.circle.fill")
                         .font(.title2)
-                        .foregroundColor(Theme.primaryGreen)
+                        .foregroundColor(AppTheme.primaryBlue)
                 }
             }
         }
@@ -59,17 +60,17 @@ extension ItsYourTurnView {
         
         VStack(spacing: 14) {
             
-            Image(systemName: "bell.circle.fill")
+            Image(systemName: "bell.badge.fill")
                 .font(.system(size: 80))
-                .foregroundStyle(Theme.primaryGreen)
+                .foregroundStyle(AppTheme.primaryBlue)
                 .symbolRenderingMode(.hierarchical)
             
             Text("It's Your Turn")
                 .font(.system(size: 32, weight: .bold, design: .rounded))
             
-            Text("Please proceed to the assigned counter")
+            Text("Please proceed to your assigned counter")
                 .font(.subheadline)
-                .foregroundColor(Theme.textSecondary)
+                .foregroundColor(AppTheme.textSecondary)
         }
     }
     
@@ -85,7 +86,7 @@ extension ItsYourTurnView {
                 .font(.system(size: 52, weight: .bold, design: .rounded))
                 .foregroundColor(.white)
             
-            Text("Your token: \(tokenState.currentToken)")
+            Text("Token: \(tokenState.currentToken)")   // CHANGED text
                 .font(.caption)
                 .foregroundColor(.white.opacity(0.8))
         }
@@ -93,7 +94,13 @@ extension ItsYourTurnView {
         .padding(.vertical, 32)
         .background(
             RoundedRectangle(cornerRadius: 20)
-                .fill(Theme.tokenCardGradient)
+                .fill(
+                    LinearGradient(   // CHANGED gradient
+                        colors: [AppTheme.primaryBlueLight, AppTheme.primaryBlue],
+                        startPoint: .topLeading,
+                        endPoint: .bottomTrailing
+                    )
+                )
                 .shadow(color: .black.opacity(0.15), radius: 18, y: 10)
         )
     }
@@ -119,9 +126,10 @@ extension ItsYourTurnView {
     
     private var actionButton: some View {
         
-        PrimaryButton(title: "Go to Counter") {
+        PrimaryButton(title: "Proceed to Counter") {
             showReview = true
         }
-        .padding(.top, 10)
+        .padding(.top, 12)
     }
 }
+
