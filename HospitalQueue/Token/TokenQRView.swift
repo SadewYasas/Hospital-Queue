@@ -1,3 +1,4 @@
+
 //
 //  TokenQRView.swift
 //  HospitalQueue
@@ -16,20 +17,24 @@ struct TokenQRView: View {
     
     var body: some View {
         
-        VStack(spacing: 28) {
+        ScrollView {
             
-            header
-            
-            tokenCard
-            
-            qrCard
-            
-            actionButtons
-            
-            Spacer()
+            VStack(spacing: 26) {
+                
+                header
+                
+                tokenCard
+                
+                qrCard
+                
+                actionButtons
+                
+            }
+            .padding(.horizontal, 24)
+            .padding(.top, 30)
+            .padding(.bottom, 40)
         }
-        .padding(.horizontal, 24)
-        .padding(.top, 30)
+        .scrollIndicators(.hidden)
         .background(
             LinearGradient(
                 colors: [
@@ -49,88 +54,156 @@ struct TokenQRView: View {
 
 extension TokenQRView {
     
+    // MARK: Header
+    
     private var header: some View {
-        VStack(spacing: 12) {
+        
+        VStack(spacing: 14) {
             
-            Image(systemName: "checkmark.circle.fill")
-                .font(.system(size: 70))
-                .foregroundStyle(Theme.primaryGreen)
-                .symbolRenderingMode(.hierarchical)
+            ZStack {
+                
+                Circle()
+                    .fill(AppTheme.primaryBlue.opacity(0.12))
+                    .frame(width: 74, height: 74)
+                
+                Image(systemName: "checkmark.seal.fill")
+                    .font(.system(size: 36))
+                    .foregroundStyle(AppTheme.primaryBlue)
+            }
             
             Text("Token Generated")
-                .font(.system(size: 24, weight: .bold, design: .rounded))
+                .font(.system(size: 24, weight: .bold))
             
-            Text("Please scan this QR code at the counter")
+            Text("Show this QR code at the service counter for verification.")
                 .font(.subheadline)
-                .foregroundColor(Theme.textSecondary)
+                .foregroundColor(AppTheme.textSecondary)
+                .multilineTextAlignment(.center)
         }
     }
     
+    // MARK: Token Card
+    
     private var tokenCard: some View {
         
-        VStack(spacing: 6) {
+        VStack(spacing: 10) {
             
-            Text("Your Token")
+            Text("Token Number")
                 .font(.caption)
-                .foregroundColor(.secondary)
+                .foregroundColor(AppTheme.textSecondary)
             
             Text(tokenState.currentToken)
-                .font(.system(size: 34, weight: .bold, design: .rounded))
-                .foregroundStyle(Theme.primaryGreen)
+                .font(.system(size: 36, weight: .bold, design: .rounded))
+                .foregroundColor(AppTheme.primaryBlue)
             
-            Text(serviceType.rawValue)
-                .font(.subheadline)
-                .foregroundColor(.secondary)
+            HStack(spacing: 6) {
+                
+                Image(systemName: "stethoscope")
+                    .font(.caption)
+                
+                Text(serviceType.rawValue)
+                    .font(.subheadline)
+            }
+            .foregroundColor(.secondary)
         }
         .frame(maxWidth: .infinity)
-        .padding(20)
+        .padding(.vertical, 22)
         .background(
             RoundedRectangle(cornerRadius: 18)
                 .fill(Color.white)
-                .shadow(color: .black.opacity(0.06), radius: 12, y: 6)
+        )
+        .overlay(
+            RoundedRectangle(cornerRadius: 18)
+                .stroke(Color(UIColor.separator).opacity(0.35), lineWidth: 1)
+        )
+        .shadow(
+            color: Color.black.opacity(0.06),
+            radius: 12,
+            x: 0,
+            y: 6
         )
     }
+    
+    // MARK: QR Card
     
     private var qrCard: some View {
         
         VStack(spacing: 18) {
             
             QRCodeView(string: tokenState.currentToken)
-                .frame(width: 200, height: 200)
+                .frame(width: 210, height: 210)
             
-            Text("Scan for verification")
-                .font(.caption)
-                .foregroundColor(.secondary)
+            HStack(spacing: 6) {
+                
+                Image(systemName: "qrcode.viewfinder")
+                    .font(.caption)
+                
+                Text("Scan for verification")
+                    .font(.caption)
+            }
+            .foregroundColor(AppTheme.textSecondary)
         }
         .frame(maxWidth: .infinity)
-        .padding(26)
+        .padding(.vertical, 28)
         .background(
             RoundedRectangle(cornerRadius: 22)
                 .fill(Color.white)
-                .shadow(color: .black.opacity(0.08), radius: 16, y: 8)
+        )
+        .overlay(
+            RoundedRectangle(cornerRadius: 22)
+                .stroke(Color(UIColor.separator).opacity(0.35), lineWidth: 1)
+        )
+        .shadow(
+            color: Color.black.opacity(0.08),
+            radius: 16,
+            x: 0,
+            y: 8
         )
     }
+    
+    // MARK: Buttons
     
     private var actionButtons: some View {
         
         VStack(spacing: 14) {
             
-            PrimaryButton(title: "View Queue Status") {
+            Button {
                 showQueueStatus = true
+            } label: {
+                
+                HStack {
+                    
+                    Image(systemName: "list.number")
+                    
+                    Text("View Queue Status")
+                        .fontWeight(.semibold)
+                }
+                .foregroundColor(.white)
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 14)
+                .background(
+                    RoundedRectangle(cornerRadius: 14)
+                        .fill(AppTheme.primaryBlue)
+                )
             }
             
             Button {
                 
             } label: {
-                Text("Hide QR")
-                    .fontWeight(.semibold)
-                    .foregroundColor(.secondary)
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 14)
-                    .background(
-                        RoundedRectangle(cornerRadius: 14)
-                            .fill(Color.gray.opacity(0.12))
-                    )
+                
+                HStack {
+                    
+                    Image(systemName: "eye.slash")
+                    
+                    Text("Hide QR Code")
+                        .fontWeight(.semibold)
+                }
+                .foregroundColor(AppTheme.textSecondary)
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 14)
+                .background(
+                    RoundedRectangle(cornerRadius: 14)
+                        .fill(Color(UIColor.secondarySystemBackground))
+                )
             }
         }
     }
@@ -152,9 +225,10 @@ struct QRCodeView: View {
         } else {
             
             RoundedRectangle(cornerRadius: 12)
-                .fill(Theme.borderGray)
+                .fill(AppTheme.borderGray)
                 .overlay(
-                    Text("QR")
+                    Image(systemName: "qrcode")
+                        .font(.title2)
                         .foregroundColor(.secondary)
                 )
         }
@@ -187,3 +261,4 @@ struct QRCodeView: View {
         return UIImage(cgImage: cgImage)
     }
 }
+
