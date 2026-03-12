@@ -5,6 +5,20 @@
 
 import SwiftUI
 
+// MARK: - Theme Colors (defined in same file)
+struct AppTheme {
+    static let primaryBlue = Color(red: 0/255, green: 122/255, blue: 255/255)       // #007AFF
+    static let primaryBlueLight = Color(red: 102/255, green: 178/255, blue: 255/255) // #66B2FF
+    static let successGreen = Color(red: 52/255, green: 199/255, blue: 89/255)      // #34C759
+    static let warningRed = Color(red: 255/255, green: 59/255, blue: 48/255)        // #FF3B30
+    static let borderGray = Color(UIColor.systemGray4)
+    static let textSecondary = Color(UIColor.secondaryLabel)
+    
+    static let tokenGradientStart = primaryBlueLight
+    static let tokenGradientEnd = primaryBlue
+}
+
+// MARK: - Walk-in Services Enum
 enum WalkInService: String, CaseIterable {
     case emergency = "Emergency"
     case odc = "ODC/Consultant"
@@ -22,14 +36,15 @@ enum WalkInService: String, CaseIterable {
     
     var iconColor: Color {
         switch self {
-        case .emergency: return .red
-        case .odc: return .blue
-        case .admission: return .green
-        case .pharmacy: return .orange
+        case .emergency: return AppTheme.warningRed
+        case .odc: return AppTheme.primaryBlue
+        case .admission: return AppTheme.primaryBlueLight
+        case .pharmacy: return AppTheme.successGreen
         }
     }
 }
 
+// MARK: - HomeView
 struct HomeView: View {
     @EnvironmentObject var appState: AppState
     @StateObject private var tokenState = TokenState.shared
@@ -54,17 +69,17 @@ struct HomeView: View {
                 HStack(spacing: 8) {
                     Image(systemName: "heart.text.square.fill")
                         .symbolRenderingMode(.hierarchical)
-                        .foregroundStyle(Theme.primaryGreen)
+                        .foregroundStyle(AppTheme.primaryBlue)
                     Text("Home")
                         .font(.system(size: 28, weight: .bold, design: .rounded))
-                        .foregroundStyle(Theme.primaryGreen)
+                        .foregroundStyle(AppTheme.primaryBlue)
                 }
             }
             ToolbarItem(placement: .navigationBarTrailing) {
                 NavigationLink(destination: ProfileView()) {
                     Image(systemName: "person.circle.fill")
                         .font(.title2)
-                        .foregroundColor(Theme.primaryGreen)
+                        .foregroundColor(AppTheme.primaryBlue)
                 }
             }
         }
@@ -73,6 +88,7 @@ struct HomeView: View {
         }
     }
     
+    // MARK: - Banner Card
     private var bannerCard: some View {
         ZStack(alignment: .trailing) {
             RoundedRectangle(cornerRadius: 20, style: .continuous)
@@ -92,7 +108,7 @@ struct HomeView: View {
             
             HStack {
                 VStack(alignment: .leading, spacing: 12) {
-                    Text("Now avail 30% off on your first booking")
+                    Text("Checking")
                         .font(.headline)
                         .foregroundColor(.white)
                         .multilineTextAlignment(.leading)
@@ -113,8 +129,10 @@ struct HomeView: View {
                 }
                 .padding(.leading, 20)
                 .padding(.vertical, 20)
+                
                 Spacer()
-                Image(systemName: "person in badge.dashed.fill")
+                
+                Image(systemName: "person.in.badge.dashed.fill")
                     .font(.system(size: 50))
                     .foregroundColor(.white.opacity(0.8))
                     .padding(.trailing, 20)
@@ -122,6 +140,7 @@ struct HomeView: View {
         }
     }
     
+    // MARK: - Walk-In Section
     private var walkInSection: some View {
         HStack(spacing: 12) {
             Rectangle()
@@ -138,6 +157,7 @@ struct HomeView: View {
         .padding(.vertical, 8)
     }
     
+    // MARK: - Service Buttons
     private var serviceButtons: some View {
         VStack(spacing: 12) {
             ForEach(WalkInService.allCases, id: \.self) { service in
@@ -155,6 +175,7 @@ struct HomeView: View {
                                 .foregroundColor(service.iconColor)
                         }
                         .frame(width: 48, height: 48)
+                        
                         VStack(alignment: .leading, spacing: 2) {
                             Text(service.rawValue)
                                 .font(.headline.weight(.semibold))
