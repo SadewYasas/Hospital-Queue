@@ -53,7 +53,7 @@ struct OTPDigitBox: View {
             )
             .cornerRadius(8)
             .focused($isFocused)
-            .onChange(of: text) { oldValue, newValue in
+            .onChange(of: text) { newValue in
                 let filtered = newValue.filter { $0.isNumber }
                 if filtered.count > 1 {
                     text = String(filtered.prefix(1))
