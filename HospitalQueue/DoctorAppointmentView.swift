@@ -201,7 +201,8 @@ struct DoctorCard: View {
             .background(
                 RoundedRectangle(cornerRadius: 12, style: .continuous)
                     .fill(isSelected ? Color(.systemTeal).opacity(0.1) : Color.white)
-                    .stroke(isSelected ? Color(.systemTeal) : Color.gray.opacity(0.15), lineWidth: 1)
+                    .overlay(RoundedRectangle(cornerRadius: 12, style: .continuous)
+                        .stroke(isSelected ? Color(.systemTeal) : Color.gray.opacity(0.15), lineWidth: 1))
             )
             .animation(Animation.iosSnappy, value: isSelected)
         }
@@ -224,7 +225,8 @@ struct TimeSlotButton: View {
                 .background(
                     RoundedRectangle(cornerRadius: 10, style: .continuous)
                         .fill(isSelected ? Color(.systemTeal) : Color.white)
-                        .stroke(isSelected ? Color(.systemTeal) : Color.gray.opacity(0.2), lineWidth: 1)
+                        .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous)
+                            .stroke(isSelected ? Color(.systemTeal) : Color.gray.opacity(0.2), lineWidth: 1))
                 )
                 .foregroundColor(isSelected ? .white : .primary)
                 .animation(Animation.iosSnappy, value: isSelected)
@@ -264,7 +266,8 @@ struct VenueButton: View {
             .background(
                 RoundedRectangle(cornerRadius: 12, style: .continuous)
                     .fill(isSelected ? Color(.systemTeal).opacity(0.1) : Color.white)
-                    .stroke(isSelected ? Color(.systemTeal) : Color.gray.opacity(0.15), lineWidth: 1)
+                    .overlay(RoundedRectangle(cornerRadius: 12, style: .continuous)
+                        .stroke(isSelected ? Color(.systemTeal) : Color.gray.opacity(0.15), lineWidth: 1))
             )
             .animation(Animation.iosSnappy, value: isSelected)
         }

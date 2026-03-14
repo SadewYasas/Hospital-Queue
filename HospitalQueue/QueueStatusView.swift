@@ -312,7 +312,7 @@ struct QueueStatusView: View {
                                 .font(.headline)
                                 .padding(.horizontal)
 
-                            Map(position: .constant(.region(region)))
+                            Map(coordinateRegion: .constant(region))
                                 .frame(height: 220)
                                 .cornerRadius(14)
                                 .padding(.horizontal)

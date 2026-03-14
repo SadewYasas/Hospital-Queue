@@ -7,12 +7,12 @@ import SwiftUI
 
 @main
 struct HospitalQueueApp: App {
-    @StateObject private var appState = AppState()
-    
+    @StateObject private var auth = AuthViewModel()
+
     var body: some Scene {
         WindowGroup {
-            RootView()
-                .environmentObject(appState)
+            ContentView()
+                .environmentObject(auth)
         }
     }
 }

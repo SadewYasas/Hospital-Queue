@@ -25,19 +25,25 @@
 		B001000000000000000010 /* PasswordResetSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000010 /* PasswordResetSuccessView.swift */; };
 		B001000000000000000011 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000011 /* WelcomeView.swift */; };
 		B001000000000000000012 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000012 /* HomeView.swift */; };
-		B001000000000000000013 /* TokenState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000013 /* TokenState.swift */; };
+		B001000000000000000013 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000013 /* ContentView.swift */; };
 		B001000000000000000014 /* TokenGeneratedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000014 /* TokenGeneratedView.swift */; };
-		B001000000000000000015 /* TokenQRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000015 /* TokenQRView.swift */; };
+		B001000000000000000015 /* QRCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000015 /* QRCodeView.swift */; };
 		B001000000000000000016 /* QueueStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000016 /* QueueStatusView.swift */; };
 		B001000000000000000017 /* ItsYourTurnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000017 /* ItsYourTurnView.swift */; };
 		B001000000000000000018 /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000018 /* ReviewView.swift */; };
-		B001000000000000000019 /* EndSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000019 /* EndSessionView.swift */; };
-		B00100000000000000001A /* NavigatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00100000000000000001A /* NavigatorView.swift */; };
+		B001000000000000000019 /* AnimatedButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000019 /* AnimatedButtonStyle.swift */; };
+		B00100000000000000001A /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00100000000000000001A /* AuthViewModel.swift */; };
 		B00100000000000000001B /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00100000000000000001B /* ProfileView.swift */; };
 		B00100000000000000001C /* ProfileSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00100000000000000001C /* ProfileSectionView.swift */; };
 		B00100000000000000001D /* DoctorListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00100000000000000001D /* DoctorListView.swift */; };
 		B00100000000000000001E /* DoctorDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00100000000000000001E /* DoctorDetailView.swift */; };
 		B00100000000000000001F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F00100000000000000001F /* Assets.xcassets */; };
+		B001000000000000000020 /* CategorySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000020 /* CategorySelectionView.swift */; };
+		B001000000000000000021 /* DoctorAppointmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000021 /* DoctorAppointmentView.swift */; };
+		B001000000000000000022 /* HowItWorksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000022 /* HowItWorksView.swift */; };
+		B001000000000000000023 /* QuickBookingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000023 /* QuickBookingView.swift */; };
+		B001000000000000000024 /* Animation+iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000024 /* Animation+iOS.swift */; };
+		B001000000000000000025 /* ServiceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001000000000000000025 /* ServiceRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,19 +66,25 @@
 		F001000000000000000010 /* PasswordResetSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetSuccessView.swift; sourceTree = "<group>"; };
 		F001000000000000000011 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		F001000000000000000012 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		F001000000000000000013 /* TokenState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenState.swift; sourceTree = "<group>"; };
+		F001000000000000000013 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F001000000000000000014 /* TokenGeneratedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenGeneratedView.swift; sourceTree = "<group>"; };
-		F001000000000000000015 /* TokenQRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenQRView.swift; sourceTree = "<group>"; };
+		F001000000000000000015 /* QRCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeView.swift; sourceTree = "<group>"; };
 		F001000000000000000016 /* QueueStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueStatusView.swift; sourceTree = "<group>"; };
 		F001000000000000000017 /* ItsYourTurnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItsYourTurnView.swift; sourceTree = "<group>"; };
 		F001000000000000000018 /* ReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
-		F001000000000000000019 /* EndSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndSessionView.swift; sourceTree = "<group>"; };
-		F00100000000000000001A /* NavigatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorView.swift; sourceTree = "<group>"; };
+		F001000000000000000019 /* AnimatedButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedButtonStyle.swift; sourceTree = "<group>"; };
+		F00100000000000000001A /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		F00100000000000000001B /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		F00100000000000000001C /* ProfileSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSectionView.swift; sourceTree = "<group>"; };
 		F00100000000000000001D /* DoctorListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorListView.swift; sourceTree = "<group>"; };
 		F00100000000000000001E /* DoctorDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorDetailView.swift; sourceTree = "<group>"; };
 		F00100000000000000001F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F001000000000000000020 /* CategorySelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySelectionView.swift; sourceTree = "<group>"; };
+		F001000000000000000021 /* DoctorAppointmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorAppointmentView.swift; sourceTree = "<group>"; };
+		F001000000000000000022 /* HowItWorksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowItWorksView.swift; sourceTree = "<group>"; };
+		F001000000000000000023 /* QuickBookingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickBookingView.swift; sourceTree = "<group>"; };
+		F001000000000000000024 /* Animation+iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Animation+iOS.swift"; sourceTree = "<group>"; };
+		F001000000000000000025 /* ServiceRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,11 +112,26 @@
 				F001000000000000000001 /* HospitalQueueApp.swift */,
 				F001000000000000000002 /* RootView.swift */,
 				F001000000000000000003 /* MainTabContainerView.swift */,
+				F00100000000000000001A /* AuthViewModel.swift */,
+				F001000000000000000013 /* ContentView.swift */,
+				F00100000000000000000B /* SignInView.swift */,
+				F001000000000000000012 /* HomeView.swift */,
+				F001000000000000000020 /* CategorySelectionView.swift */,
+				F001000000000000000021 /* DoctorAppointmentView.swift */,
+				F001000000000000000022 /* HowItWorksView.swift */,
+				F001000000000000000023 /* QuickBookingView.swift */,
+				F001000000000000000016 /* QueueStatusView.swift */,
+				F001000000000000000017 /* ItsYourTurnView.swift */,
+				F001000000000000000014 /* TokenGeneratedView.swift */,
+				F00100000000000000001B /* ProfileView.swift */,
+				F001000000000000000015 /* QRCodeView.swift */,
+				F001000000000000000019 /* AnimatedButtonStyle.swift */,
+				F001000000000000000024 /* Animation+iOS.swift */,
+				F001000000000000000025 /* ServiceRow.swift */,
 				G001000000000000000004 /* Shared */,
 				G001000000000000000005 /* Auth */,
 				G001000000000000000006 /* Home */,
 				G001000000000000000007 /* Token */,
-				G001000000000000000008 /* Navigator */,
 				G001000000000000000009 /* Profile */,
 				G00100000000000000000A /* DoctorAppointment */,
 				F00100000000000000001F /* Assets.xcassets */,
@@ -137,7 +164,6 @@
 		G001000000000000000005 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				F00100000000000000000B /* SignInView.swift */,
 				F00100000000000000000C /* CreateAccountView.swift */,
 				F00100000000000000000D /* ForgotPasswordView.swift */,
 				F00100000000000000000E /* OTPVerificationView.swift */,
@@ -151,7 +177,6 @@
 			isa = PBXGroup;
 			children = (
 				F001000000000000000011 /* WelcomeView.swift */,
-				F001000000000000000012 /* HomeView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -159,29 +184,14 @@
 		G001000000000000000007 /* Token */ = {
 			isa = PBXGroup;
 			children = (
-				F001000000000000000013 /* TokenState.swift */,
-				F001000000000000000014 /* TokenGeneratedView.swift */,
-				F001000000000000000015 /* TokenQRView.swift */,
-				F001000000000000000016 /* QueueStatusView.swift */,
-				F001000000000000000017 /* ItsYourTurnView.swift */,
 				F001000000000000000018 /* ReviewView.swift */,
-				F001000000000000000019 /* EndSessionView.swift */,
 			);
 			path = Token;
-			sourceTree = "<group>";
-		};
-		G001000000000000000008 /* Navigator */ = {
-			isa = PBXGroup;
-			children = (
-				F00100000000000000001A /* NavigatorView.swift */,
-			);
-			path = Navigator;
 			sourceTree = "<group>";
 		};
 		G001000000000000000009 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				F00100000000000000001B /* ProfileView.swift */,
 				F00100000000000000001C /* ProfileSectionView.swift */,
 			);
 			path = Profile;
@@ -278,18 +288,24 @@
 				B001000000000000000010 /* PasswordResetSuccessView.swift in Sources */,
 				B001000000000000000011 /* WelcomeView.swift in Sources */,
 				B001000000000000000012 /* HomeView.swift in Sources */,
-				B001000000000000000013 /* TokenState.swift in Sources */,
+				B001000000000000000013 /* ContentView.swift in Sources */,
 				B001000000000000000014 /* TokenGeneratedView.swift in Sources */,
-				B001000000000000000015 /* TokenQRView.swift in Sources */,
+				B001000000000000000015 /* QRCodeView.swift in Sources */,
 				B001000000000000000016 /* QueueStatusView.swift in Sources */,
 				B001000000000000000017 /* ItsYourTurnView.swift in Sources */,
 				B001000000000000000018 /* ReviewView.swift in Sources */,
-				B001000000000000000019 /* EndSessionView.swift in Sources */,
-				B00100000000000000001A /* NavigatorView.swift in Sources */,
+				B001000000000000000019 /* AnimatedButtonStyle.swift in Sources */,
+				B00100000000000000001A /* AuthViewModel.swift in Sources */,
 				B00100000000000000001B /* ProfileView.swift in Sources */,
 				B00100000000000000001C /* ProfileSectionView.swift in Sources */,
 				B00100000000000000001D /* DoctorListView.swift in Sources */,
 				B00100000000000000001E /* DoctorDetailView.swift in Sources */,
+				B001000000000000000020 /* CategorySelectionView.swift in Sources */,
+				B001000000000000000021 /* DoctorAppointmentView.swift in Sources */,
+				B001000000000000000022 /* HowItWorksView.swift in Sources */,
+				B001000000000000000023 /* QuickBookingView.swift in Sources */,
+				B001000000000000000024 /* Animation+iOS.swift in Sources */,
+				B001000000000000000025 /* ServiceRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

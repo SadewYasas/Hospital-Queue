@@ -102,7 +102,7 @@ struct QuickBookingView: View {
                             )
                             .datePickerStyle(.graphical)
                             .labelsHidden()
-                            .onChange(of: selectedDate) { _, _ in
+                            .onChange(of: selectedDate) { _ in
                                 selectedTime = nil
                             }
 

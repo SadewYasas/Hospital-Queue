@@ -94,7 +94,7 @@ struct SignInView: View {
                 .textFieldStyle(.roundedBorder)
                 .keyboardType(.phonePad)
                 .textContentType(.telephoneNumber)
-                .onChange(of: phoneNumber) { _, _ in
+                .onChange(of: phoneNumber) { _ in
                     if phoneError != nil { phoneError = nil }
                 }
 
@@ -161,7 +161,7 @@ struct SignInView: View {
                         .textFieldStyle(.roundedBorder)
                         .keyboardType(.numberPad)
                         .textContentType(.oneTimeCode)
-                        .onChange(of: otpCode) { _, _ in
+                        .onChange(of: otpCode) { _ in
                             if otpError != nil { otpError = nil }
                         }
 
